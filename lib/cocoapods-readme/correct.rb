@@ -81,7 +81,7 @@ module CocoapodsReadme
           exit
         end
 
-        pause = left > 1000 ? Random.new.rand(40..60) : 300
+        pause = left > 1000 ? Random.new.rand(30..60) : 300
         puts "Pausing for #{pause}s ... 😴"
         sleep pause
       end
