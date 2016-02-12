@@ -35,6 +35,7 @@ module CocoapodsReadme
         .select { |r| r.include? '/' }
         .map { |l| l.sub 'https://github.com/', ''}
 
+      File.open(LOG_FILE, 'a') { |f| f.puts '' }
       repos.each.with_index do |repo, i|
         log = File.read LOG_FILE
 

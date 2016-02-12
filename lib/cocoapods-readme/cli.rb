@@ -22,6 +22,7 @@ module CocoapodsReadme
       repo = cli_repo.sub 'https://github.com/', ''
       puts "Checking #{repo} ..."
 
+      File.open(LOG_FILE, 'a') { |f| f.puts '' }
       log = File.read LOG_FILE
 
       if log.include? repo
