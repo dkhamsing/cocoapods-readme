@@ -62,7 +62,14 @@ module CocoapodsReadme
       default_branch = github_default_branch c, repo
       file_updated = 'temp-corrected'
       File.write file_updated, content_corrected
-      pull_url = github_pull_request(repo, default_branch, readme, file_updated, description, nil)
+      pull_url = github_pull_request(repo,
+        default_branch,
+        readme,
+        file_updated,
+        PULL_REQUEST_COMMIT_MESSAGE,
+        PULL_REQUEST_TITLE,
+        description,
+        nil)
       puts "Done: #{pull_url}"
 
       if auto

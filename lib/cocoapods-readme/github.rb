@@ -39,7 +39,14 @@ module CocoapodsReadme
       n[0]
     end
 
-    def github_pull_request(repo, branch, readme, filename, description, log)
+    def github_pull_request(repo,
+      branch,
+      readme,
+      filename,
+      commit_message,
+      pull_title,
+      description,
+      log)
       forker = github_netrc_username
       fork = repo.gsub(%r{.*\/}, "#{forker}/")
       log.verbose "Fork: #{fork}" unless log == nil
@@ -82,7 +89,6 @@ module CocoapodsReadme
                                            type: 'blob',
                                            sha: blob_sha }],
                                         base_tree: sha_base_tree).sha
-      commit_message = PULL_REQUEST_COMMIT_MESSAGE
       sha_new_commit = github.create_commit(fork,
                                             commit_message,
                                             sha_new_tree,
@@ -100,7 +106,7 @@ module CocoapodsReadme
         created = github.create_pull_request(repo,
                                              branch,
                                              head,
-                                             PULL_REQUEST_TITLE,
+                                             pull_title,
                                              description)
         return created[:html_url]
       rescue StandardError => e
