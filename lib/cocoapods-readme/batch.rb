@@ -35,10 +35,10 @@ module CocoapodsReadme
         .select { |r| r.include? '/' }
         .map { |l| l.sub 'https://github.com/', ''}
 
-      repos.each do |repo|
+      repos.each.with_index do |repo, i|
         log = File.read LOG_FILE
 
-        print "#{repo}: "
+        print "#{i+1}/#{repos.count}. #{repo}: "
 
         if log.include? repo
           puts "Skipping, already in log"
