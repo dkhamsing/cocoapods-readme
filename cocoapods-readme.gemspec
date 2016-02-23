@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = CocoapodsReadme::PRODUCT_DESCRIPTION
   spec.description   = CocoapodsReadme::PRODUCT_DESCRIPTION
   spec.homepage      = CocoapodsReadme::PRODUCT_URL
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = 'bin'
@@ -19,5 +20,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'octokit', '~> 4.2.0' #github
+  spec.add_dependency 'netrc'
   spec.add_dependency 'differ', '~> 0.1.2'
 end
