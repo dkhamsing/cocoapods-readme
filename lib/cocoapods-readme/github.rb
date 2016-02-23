@@ -108,6 +108,10 @@ module CocoapodsReadme
                                              head,
                                              pull_title,
                                              description)
+
+        puts "Deleting fork..."
+        github.delete_repo fork 
+
         return created[:html_url]
       rescue StandardError => e
         puts 'Could not create pull request'
