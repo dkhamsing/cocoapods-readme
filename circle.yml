@@ -1,0 +1,12 @@
+machine:
+  ruby:
+    version: 2.2.0
+test:
+  pre:
+    - rake install
+  override:
+    - cocoapods-readme
+    - ruby test/readme_test.rb
+general:
+  artifacts:
+    - log.txt

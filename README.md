@@ -5,6 +5,8 @@
 
 Well [Orta](https://github.com/orta), `cocoapods-readme` is here to help :smile:
 
+[![CircleCI](https://img.shields.io/circleci/project/dkhamsing/cocoapods-readme.svg)](https://circleci.com/gh/dkhamsing/cocoapods-readme)
+
 ## Installation
 
 ```shell
