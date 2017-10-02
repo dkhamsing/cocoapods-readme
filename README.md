@@ -1,7 +1,6 @@
 # cocoapods-readme
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">One day I’ll make a bot that looks through the READMEs of all Pods, looks to see if it uses “Cocoapods” and PRs “CocoaPods” :D</p>&mdash; Ørta (@orta) <a href="https://twitter.com/orta/status/697374357975388160">February 10, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Well [Orta](https://github.com/orta), `cocoapods-readme` is here to help :smile:
 
